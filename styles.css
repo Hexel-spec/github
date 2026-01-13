@@ -40,13 +40,17 @@ body {
 }
 
 #title h1 {
-    animation: animation1 2s 3s;
+    animation: titleAnimation1 3s 3s infinite;
     animation-fill-mode: forwards;
 }
 
 
-@keyframes animation1 {
+@keyframes titleAnimation1 {
     0% {
+        transform: rotateY(0deg);
+    }
+
+    40% {
         transform: rotateY(0deg);
     }
 
