@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 1</title>
+</head>
+<body>
+    
+    <h1>Experiment 1</h1>
+    <h2>Open the console to see the pyramid scheme!</h2>
+    
+    <script>
+
+        // My program makes seven calls to console.log with a for loop in order to create a triangle that has columns that alternate between A and B //
+
+
+        //THIS IS THE SEQUENCE//
+        var line = "";
+
+        //THIS IS THE LOOP//
+        for (i = 0; i < 7; i++) {
+
+            //THIS IS THE SELECTION//
+            if(i % 2 == 0) {
+                line = line + 'A';
+                console.log(line);
+            } else {
+                line = line + 'B';
+                console.log(line);
+            }
+        }
+
+    </script>
+
+</body>
+</html>
