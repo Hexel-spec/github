@@ -1,0 +1,36 @@
+img {
+    display: block;
+    margin: auto;
+}
+
+body {
+    font-family: Quicksand, Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: #389F83;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    font-family: "Racing Sans One", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 7em;
+    text-align: center;
+    margin: auto;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-left: 1em;
+}
+
+main {
+    display: flex;
+}
+
+section {
+    flex: 1;
+}
