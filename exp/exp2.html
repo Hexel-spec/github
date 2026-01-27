@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Experiment 2</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+    <link href="styles.css" rel="stylesheet">
 </head>
 <body>
     
@@ -25,19 +35,19 @@
         function output(fruit){
             var body = document.querySelector('body');
             if (fruit === 'apple') {
-                body.style.backgroundColor = 'red';
+                body.style.backgroundColor = 'darkRed';
                 body.innerHTML = '<h1>Enjoy your scrumptious apple! :D</h1>';
             } else if (fruit === 'orange') {
                 body.style.backgroundColor = 'orange';
                 body.innerHTML = '<h1>Cherish your delectable orange! ;)</h1>';
             } else if (fruit === 'banana') {
-                body.style.backgroundColor = 'yellow';
+                body.style.backgroundColor = 'gold';
                 body.innerHTML = '<h1>Relish in your delightful banana! :J</h1>';
             } else if (fruit === 'pear'){
                 body.style.backgroundColor = 'green';
                 body.innerHTML = "<h1>Ew, what's wrong with you? XO</h1>";
             } else if (fruit === 'blueberries'){
-                body.style.backgroundColor = 'blue';
+                body.style.backgroundColor = 'darkBlue';
                 body.innerHTML = "<h1>Treasure your divine blueberries! :M</h1>";
             } else if (fruit === 'grapes'){
                 body.style.backgroundColor = 'purple';
