@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 2</title>
+</head>
+<body>
+    
+    <script>
+
+        var fruits = ['apple', 'orange', 'banana', 'pear', 'blueberries', 'grapes']
+
+        function snackTime(snack) {
+            for (var i = 0; i < fruits.length; i++){
+                if (snack === fruits[i]){
+                    return snack;
+                }
+            }
+
+            return null
+        }
+
+        function output(fruit){
+            var body = document.querySelector('body');
+            if (fruit === 'apple') {
+                body.style.backgroundColor = 'red';
+                body.innerHTML = '<h1>Enjoy your scrumptious apple! :D</h1>';
+            } else if (fruit === 'orange') {
+                body.style.backgroundColor = 'orange';
+                body.innerHTML = '<h1>Cherish your delectable orange! ;)</h1>';
+            } else if (fruit === 'banana') {
+                body.style.backgroundColor = 'yellow';
+                body.innerHTML = '<h1>Relish in your delightful banana! :J</h1>';
+            } else if (fruit === 'pear'){
+                body.style.backgroundColor = 'green';
+                body.innerHTML = "<h1>Ew, what's wrong with you? XO</h1>";
+            } else if (fruit === 'blueberries'){
+                body.style.backgroundColor = 'blue';
+                body.innerHTML = "<h1>Treasure your divine blueberries! :M</h1>";
+            } else if (fruit === 'grapes'){
+                body.style.backgroundColor = 'purple';
+                body.innerHTML = "<h1>Savor your delicious grapes! :v</h1>";
+            } else {
+                body.style.backgroundColor = 'gray';
+                body.innerHTML = "<h1>Aw, we don't have that... :(</h1>";
+            }
+        }
+
+        var result = snackTime(prompt("It's snack time! Choose a fruit from these options: apple, orange, banana, pear, blueberries, grapes.", "").toLowerCase());
+
+        output(result);
+
+    </script>
+    
+</body>
+</html>
