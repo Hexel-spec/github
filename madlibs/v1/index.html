@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MadLibs Murder Mystery</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&display=swap" rel="stylesheet">
+
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <h1>MadLibs Murder Mystery</h1>
+    </header>
+    
+
+    <main>
+
+        <section id="evidence-list">
+            <section>
+                <h2>Evidence List</h2>
+                <p>
+                    Fill in the entries on the right, then press "Continue" to start the story!
+                </p>
+            </section>
+
+            <form>
+                <label for="location">noun (place):</label>
+                <input type="text" name="location" id="location" required>
+
+                <label for="name">name:</label>
+                <input type="text" name="name" id="name" required>
+
+                <label for="cause-of-death">verb (past-tense):</label>
+                <input type="text" name="cod" id="cod" required>
+
+                <label for="time-of-death">time:</label>
+                <input type="text" name="time" id="time" required>
+
+                <label for="weapon">noun (object):</label>
+                <input type="text" name="weapon" id="weapon" required>
+
+                <label for="color">color:</label>
+                <select name="color" id="color" required>
+                    <option value="not-selected">---</option>
+                    <option value="gray">Gray</option>
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                </select>
+
+                <button type="submit">Continue</button>
+            </form>
+        </section>
+
+        <section id="case-summary">
+            <section>
+                <!--Image goes here-->
+            </section>
+
+            <section>
+                <h2>Case Summary</h2>
+
+                <p>
+                    You are the acclaimed private investigator, Detective Peeka. As a detective, you are tasked with solving a variety of issues, from marriage disputes to missing rodent cases. Today, you have been called in to solve a ghastly murder.
+                </p>
+
+                <p>
+                    Today, a body was discovered [noun, place]. The sorry corpse was identified as [name]. According to the autopsy report, the victim was brutally [verb, past tense] to death around [time]. While it’s not certain, the culprit most likely used the [noun, object] found at the scene to do the devilish deed. While snooping around, you also found a ripped [color] scrap laying around inconspicuously.
+                </p>
+
+                <p>
+                    The police have identified three potential suspects. Use your keen detective intuition to identify the perp and send them to the slammer! 
+                </p>
+
+                <button>Continue</button>
+            </section>
+            
+
+        </section>
+
+        <section id="choose-suspect">
+            <section>
+                <h2>Choose A Suspect!</h2>
+            </section>
+
+            <form>
+                <!--Need to make sure only one option may be selected-->
+                <input type="radio" name="riley" id="select-riley" value="yes">
+                <label for="select-riley">Riley the Rat</label>
+
+                <input type="radio" name="larry" id="select-larry" value="yes">
+                <label for="select-larry">Larry the Lagomorph</label>
+
+                <input type="radio" name="dusty" id="select-dusty" value="yes">
+                <label for="select-dusty">Dusty the Chinchilla</label>
+
+                <button type="submit">Continue</button>
+            </form>
+        </section>
+
+        <section id="case-closed">
+            <h2>Case Closed!</h2>
+            <p>Congratulations! Once again, the Great Detective Peeka has cracked the case (probably). Justice always prevails!</p>
+            <button>Back to Start</button>
+        </section>
+
+    </main>
+    
+</body>
+</html>
