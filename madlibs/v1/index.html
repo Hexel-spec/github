@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MadLibs Murder Mystery</title>
+    <script src="script.js" defer></script>
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
 
@@ -29,42 +30,48 @@
                 <p>
                     Fill in the entries on the right, then press "Continue" to start the story!
                 </p>
+                <img src="../images/pencil-graphic.png" alt="pencil" width="308" height="36">
             </section>
 
-            <form>
-                <label for="location">noun (place):</label>
-                <input type="text" name="location" id="location" required>
+            <section>
 
-                <label for="name">name:</label>
-                <input type="text" name="name" id="name" required>
+                <img id="notebook" src="../images/notebook-graphic.png" alt="notebook" width="415" height="580">
 
-                <label for="cause-of-death">verb (past-tense):</label>
-                <input type="text" name="cod" id="cod" required>
+                <form>
+                    <label for="location">noun (place):</label>
+                    <input type="text" name="location" id="location" required>
 
-                <label for="time-of-death">time:</label>
-                <input type="text" name="time" id="time" required>
+                    <label for="name">name:</label>
+                    <input type="text" name="name" id="name" required>
 
-                <label for="weapon">noun (object):</label>
-                <input type="text" name="weapon" id="weapon" required>
+                    <label for="cod">verb (past-tense):</label>
+                    <input type="text" name="cod" id="cod" required>
 
-                <label for="color">color:</label>
-                <select name="color" id="color" required>
-                    <option value="not-selected">---</option>
-                    <option value="gray">Gray</option>
-                    <option value="red">Red</option>
-                    <option value="blue">Blue</option>
-                </select>
+                    <label for="time">time:</label>
+                    <input type="text" name="time" id="time" required>
 
-                <button type="submit">Continue</button>
-            </form>
+                    <label for="weapon">noun (object):</label>
+                    <input type="text" name="weapon" id="weapon" required>
+
+                    <label for="color">color:</label>
+                    <select name="color" id="color" required>
+                        <option value="">---</option>
+                        <option value="gray">Gray</option>
+                        <option value="red">Red</option>
+                        <option value="blue">Blue</option>
+                    </select>
+
+                    <button type="submit">Continue</button>
+                </form>
+            </section>    
         </section>
 
         <section id="case-summary">
             <section>
-                <!--Image goes here-->
+                <img src="../images/investigation.png" alt="Detective Peeka investigating the scene" height="600">
             </section>
 
-            <section>
+            <section id="narration">
                 <h2>Case Summary</h2>
 
                 <p>
@@ -86,28 +93,38 @@
         </section>
 
         <section id="choose-suspect">
+            
+            <h2>Choose a Suspect!</h2>
+
             <section>
-                <h2>Choose A Suspect!</h2>
+                <img src="../images/riley.png" alt="image of riley the rat" width="350" height="350">
+                <img src="../images/larry.png" alt="image of larry the lagomorph" width="350" height="350">
+                <img src="../images/dusty.png" alt="image of dusty the chinchilla" width="350" height="350">
             </section>
 
             <form>
-                <!--Need to make sure only one option may be selected-->
-                <input type="radio" name="riley" id="select-riley" value="yes">
-                <label for="select-riley">Riley the Rat</label>
+                <fieldset>
+                    <input type="radio" name="suspect" id="select-riley" value="yes">
+                    <label for="select-riley">Riley the Rat</label>
 
-                <input type="radio" name="larry" id="select-larry" value="yes">
-                <label for="select-larry">Larry the Lagomorph</label>
+                    <input type="radio" name="suspect" id="select-larry" value="yes">
+                    <label for="select-larry">Larry the Lagomorph</label>
 
-                <input type="radio" name="dusty" id="select-dusty" value="yes">
-                <label for="select-dusty">Dusty the Chinchilla</label>
-
+                    <input type="radio" name="suspect" id="select-dusty" value="yes">
+                    <label for="select-dusty">Dusty the Chinchilla</label>
+                </fieldset>
                 <button type="submit">Continue</button>
             </form>
+
+            
         </section>
 
         <section id="case-closed">
-            <h2>Case Closed!</h2>
-            <p>Congratulations! Once again, the Great Detective Peeka has cracked the case (probably). Justice always prevails!</p>
+            <img src="../images/handcuffed.png" alt="culprit handcuffed" width="800" height="400">
+            <section>
+                <h2>Case Closed!</h2>
+                <p>Congratulations! Once again, the Great Detective Peeka has cracked the case (probably). Justice always prevails!</p>
+            </section>    
             <button>Back to Start</button>
         </section>
 

@@ -2,36 +2,150 @@ body {
     background-color: #4f4949;
     font-family: 'Anonymous Pro', 'Times New Roman', Times, serif;
     color: white;
+    font-size: 1.25em;
 }
 
 h1, h2 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 400;
 }
 
 h2 {
     color: rgb(225, 55, 55);
+    font-size: 4em;
+    margin-bottom: 0;
 }
 
 header {
     background-color: rgb(225, 55, 55);
+    text-align: center;
+    margin: 0;
+    padding: 0.1em;
+}
+
+img {
+    display: block;
+}
+
+button {
+    display: block;
+    color: white;
+    background-color: rgb(225, 55, 55);
+    margin-top: 0.5em;
+    padding: 0.4em 0.6em 0.4em 0.6em;
+    border-width: 0;
+    border-radius: 0.5em;
+    font-weight: 500;
 }
 
 #evidence-list {
-    display: block;
+    display: flex;
+    padding: 4em;
+    /* To turn on/off */
     /* display: none; */
 }
 
+#evidence-list section {
+    flex: 1;
+}
+
+#notebook {
+    position: absolute;
+    top: 55%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+#evidence-list form {
+    position: absolute;
+    top: 57%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    color: black;
+}
+
+#evidence-list form label, #evidence-list form input {
+    display: block;
+}
+
+#evidence-list form input[type=text] {
+    border: 1px solid#BFB997;
+    margin-bottom: 0.2em;
+}
+
 #case-summary {
-    /* display: block; */
+    display: flex;
+    /* To turn on/off */
     display: none;
+}
+
+#case-summary h2 {
+    margin: 0;
+}
+
+#case-summary p {
+    color: black;
+    font-size: 0.9em;
+    padding-left: 0.35em;
+}
+
+#case-summary section {
+    flex: 1;
+    padding: 2em 2em 0 2em;
+}
+
+#narration {
+    background-color: #EFE8D3;
 }
 
 #choose-suspect {
-    /* display: block; */
+    text-align: center;
+    /* To turn on/off */
     display: none;
 }
 
+#choose-suspect h2 {
+    margin-top: 0.5em;
+}
+
+#choose-suspect section {
+    display: flex;
+    justify-content: center;
+}
+
+#choose-suspect form fieldset{
+    padding-left: 3em;
+    border-width: 0;
+}
+
+#choose-suspect form label {
+    margin-right: 3em;
+}
+
+#choose-suspect form input {
+    margin: 1em;
+}
+
+
+#choose-suspect button {
+    margin: auto;
+}
 #case-closed {
-    /* display: block; */
+    text-align: center;
+    /* To turn on/off */
     display: none;
+}
+
+#case-closed section {
+    max-width: 700px;
+    margin: auto;
+}
+
+#case-closed h2 {
+    margin: 0;
+}
+
+#case-closed img, #case-closed button {
+    margin: auto;
 }
