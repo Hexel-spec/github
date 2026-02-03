@@ -36,6 +36,12 @@ button {
     border-width: 0;
     border-radius: 0.5em;
     font-weight: 500;
+    transition: all 0.25s;
+}
+
+button:hover {
+    background-color: rgb(138, 24, 24);
+    cursor: pointer;
 }
 
 #evidence-list {
@@ -71,7 +77,11 @@ button {
 
 #evidence-list form input[type=text] {
     border: 1px solid#BFB997;
-    margin-bottom: 0.2em;
+    margin-bottom: 0.5em;
+}
+
+#evidence-list form select {
+    cursor: pointer;
 }
 
 #case-summary {
@@ -117,6 +127,10 @@ button {
 #choose-suspect form fieldset{
     padding-left: 3em;
     border-width: 0;
+}
+
+#choose-suspect form label, #choose-suspect form input {
+    cursor: pointer;
 }
 
 #choose-suspect form label {
