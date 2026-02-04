@@ -3,7 +3,7 @@
     'use strict';
     console.log('reading js');
 
-    const notebook = document.querySelector('#notebook');
+    const notebook = document.querySelector('#notebookForm');
 
     notebook.addEventListener('submit', function(event){
         event.preventDefault();
