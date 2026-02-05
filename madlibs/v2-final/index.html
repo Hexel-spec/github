@@ -27,74 +27,77 @@
     <main>
 
         <section id="evidence-list">
-            <section>
-                <h2>Evidence List</h2>
-                <p>
-                    Fill in the entries on the right, then press "Continue" to start the story!
-                </p>
-                <img src="images/pencil-graphic.png" alt="pencil" width="308" height="36">
-            </section>
+            <div>
+                <section>
+                    <h2>Evidence List</h2>
+                    <p>
+                        Fill in the entries on the right, then press "Continue" to start the story!
+                    </p>
+                    <img src="images/pencil-graphic.png" alt="pencil" width="308" height="36">
+                </section>
 
-            <section>
+                <section>
 
-                <img id="notebook" src="images/notebook-graphic.png" alt="notebook" width="415" height="580">
+                    <img id="notebook" src="images/notebook-graphic.png" alt="notebook" width="415" height="580">
 
-                <form id="notebookForm">
-                    <label for="location">noun (place):</label>
-                    <input type="text" name="location" id="location" required>
+                    <form id="notebookForm">
+                        <label for="location">noun (place):</label>
+                        <input type="text" name="location" id="location" required>
 
-                    <label for="name">name:</label>
-                    <input type="text" name="name" id="name" required>
+                        <label for="name">name:</label>
+                        <input type="text" name="name" id="name" required>
 
-                    <label for="cod">verb (past-tense):</label>
-                    <input type="text" name="cod" id="cod" required>
+                        <label for="cod">verb (past-tense):</label>
+                        <input type="text" name="cod" id="cod" required>
 
-                    <label for="time">time:</label>
-                    <input type="text" name="time" id="time" required>
+                        <label for="time">time:</label>
+                        <input type="text" name="time" id="time" required>
 
-                    <label for="weapon">noun (object):</label>
-                    <input type="text" name="weapon" id="weapon" required>
+                        <label for="weapon">noun (object):</label>
+                        <input type="text" name="weapon" id="weapon" required>
 
-                    <label for="color">color:</label>
-                    <select name="color" id="color" required>
-                        <option value="">---</option>
-                        <option value="gray">Gray</option>
-                        <option value="red">Red</option>
-                        <option value="blue">Blue</option>
-                    </select>
+                        <label for="color">color:</label>
+                        <select name="color" id="color" required>
+                            <option value="">---</option>
+                            <option value="gray">Gray</option>
+                            <option value="red">Red</option>
+                            <option value="blue">Blue</option>
+                        </select>
 
-                    <input type="submit" value="Continue">
-                </form>
-            </section>    
+                        <input type="submit" value="Continue">
+                    </form>
+                </section>    
+            </div>
         </section>
 
-        <section id="case-summary">
-            <section>
-                <img src="images/investigation.png" alt="Detective Peeka investigating the scene" height="600">
-            </section>
+        <section id="summary" class="hidden">
+            <div id="case-summary">
+                <section>
+                    <img src="images/investigation.png" alt="Detective Peeka investigating the scene" height="600">
+                </section>
 
-            <section id="narration">
-                <h2>Case Summary</h2>
+                <section id="narration">
+                    <h2>Case Summary</h2>
 
-                <p>
-                    You are the acclaimed private investigator, Detective Peeka. As a detective, you are tasked with solving a variety of issues, from marriage disputes to missing rodent cases. Today, you have been called in to solve a ghastly murder.
-                </p>
+                    <p>
+                        You are the acclaimed private investigator, Detective Peeka. As a detective, you are tasked with solving a variety of issues, from marriage disputes to missing rodent cases. Today, you have been called in to solve a ghastly murder.
+                    </p>
 
-                <p id="madlib">
-                    Today, a body was discovered in [noun, place]. The sorry corpse was identified as [name]. According to the autopsy report, the victim was brutally [verb, past tense] to death around [time]. While it’s not certain, the culprit most likely used the [noun, object] found at the scene to do the devilish deed. While snooping around, you also found a ripped [color] scrap laying around inconspicuously.
-                </p>
+                    <p id="madlib">
+                        Today, a body was discovered in [noun, place]. The sorry corpse was identified as [name]. According to the autopsy report, the victim was brutally [verb, past tense] to death around [time]. While it’s not certain, the culprit most likely used the [noun, object] found at the scene to do the devilish deed. While snooping around, you also found a ripped [color] scrap laying around inconspicuously.
+                    </p>
 
-                <p>
-                    The police have identified three potential suspects. Use your keen detective intuition to identify the perp and send them to the slammer! 
-                </p>
+                    <p>
+                        The police have identified three potential suspects. Use your keen detective intuition to identify the perp and send them to the slammer! 
+                    </p>
 
-                <button>Continue</button>
-            </section>
-            
+                    <button id="summaryBtn" type="button">Continue</button>   
+                </section>
+            </div>
 
         </section>
 
-        <section id="choose-suspect">
+        <section id="choose-suspect" class="hidden">
             
             <h2>Choose a Suspect!</h2>
 
@@ -121,13 +124,13 @@
             
         </section>
 
-        <section id="case-closed">
+        <section id="case-closed" class="hidden">
             <img src="images/handcuffed.png" alt="culprit handcuffed" width="800" height="400">
             <section>
                 <h2>Case Closed!</h2>
                 <p>Congratulations! Once again, the Great Detective Peeka has cracked the case (probably). Justice always prevails!</p>
             </section>    
-            <button>Back to Start</button>
+            <button id="restart" type="button">Back to Start</button>
         </section>
 
     </main>

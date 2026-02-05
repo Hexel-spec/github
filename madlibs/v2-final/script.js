@@ -3,8 +3,18 @@
     'use strict';
     console.log('reading js');
 
-    const notebook = document.querySelector('#notebookForm');
+    const evidence = document.querySelector('#evidence-list');
+    const summary = document.querySelector('#summary');
+    const choose = document.querySelector('#choose-suspect');
+    const closed = document.querySelector('#case-closed')
 
+    const notebook = document.querySelector('#notebookForm');
+    const summaryBtn = document.querySelector('#summaryBtn')
+    const accuse = document.querySelector('#accuse');
+    const restart = document.querySelector('#restart');
+
+
+    // Evidence List >>> Summary
     notebook.addEventListener('submit', function(event){
         event.preventDefault();
 
@@ -21,6 +31,30 @@
 
         const madlib = document.querySelector('#madlib');
         madlib.innerHTML = myText;
+
+        evidence.className = 'hidden';
+        summary.removeAttribute('class');
     });
+
+    // Summary >>> Choose
+    summaryBtn.addEventListener('click', function(event){
+        summary.className = 'hidden';
+        choose.removeAttribute('class');
+    });
+
+    // Choose >>> Closed
+    accuse.addEventListener('submit', function(event){
+        event.preventDefault();
+
+        choose.className = 'hidden';
+        closed.removeAttribute('class');
+    });
+
+    // Closed >>> Evidence List
+    restart.addEventListener('click', function(event){
+        closed.className = 'hidden';
+        evidence.removeAttribute('class');
+    });
+
 
 }());
