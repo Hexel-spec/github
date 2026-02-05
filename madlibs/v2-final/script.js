@@ -27,13 +27,50 @@
         const weapon = document.querySelector('#weapon').value;
         const color = document.querySelector('#color').value;
 
-        myText = `Today, a body was discovered in ${location}. The sorry corpse was identified as ${name}. According to the autopsy report, the victim was brutally ${cod} to death around ${time}. While it’s not certain, the culprit most likely used the ${weapon} found at the scene to do the devilish deed. While snooping around, you also found a ripped ${color} scrap laying around inconspicuously.`;
+        const opening = document.querySelector('#opening');
+        const selectLocation = 'Please enter a location in order to continue.';
+        const selectName = 'Please enter a name in order to continue.';
+        const selectCod = 'Please enter a verb in past tense in order to continue.';
+        const selectTime = 'Please enter a time to continue (e.g. clock time, part of day).';
+        const selectWeapon = 'Please enter an object in order to continue.';
+        const selectColor = 'Please select a color from the options in order to continue.';
+        const normalMsg = ' Fill in the entries on the right, then press "Continue" to start the story!'
 
-        const madlib = document.querySelector('#madlib');
-        madlib.innerHTML = myText;
+        if (location === ''){
+            opening.innerHTML = selectLocation;
+            document.querySelector('#location').focus();   
+        } else if (name === '') {
+            opening.innerHTML = selectName;
+            document.querySelector('#name').focus();
+        } else if (cod === '') {
+            opening.innerHTML = selectCod;
+            document.querySelector('#cod').focus();
+        } else if (time === '') {
+            opening.innerHTML = selectTime;
+            document.querySelector('#time').focus();
+        } else if (weapon === '') {
+            opening.innerHTML = selectWeapon;
+            document.querySelector('#weapon').focus();
+        } else if (color === '---') {
+            opening.innerHTML = selectColor;
+            document.querySelector('#color').focus();
+        } else {
+            myText = `Today, a body was discovered in <strong>${location}</strong>. The sorry corpse was identified as <strong>${name}</strong>. According to the autopsy report, the victim was brutally <strong>${cod}</strong> to death around <strong>${time}</strong>. While it’s not certain, the culprit most likely used the <strong>${weapon}</strong> found at the scene to do the devilish deed. While snooping around, you also found a ripped <strong>${color}</strong> scrap laying around inconspicuously.`;
 
-        evidence.className = 'hidden';
-        summary.removeAttribute('class');
+            const madlib = document.querySelector('#madlib');
+            madlib.innerHTML = myText;
+
+            evidence.className = 'hidden';
+            summary.removeAttribute('class');
+
+            opening.innerHTML = normalMsg;
+        }
+
+        
+
+            
+
+        
     });
 
     // Summary >>> Choose
@@ -52,6 +89,21 @@
 
     // Closed >>> Evidence List
     restart.addEventListener('click', function(event){
+        
+        const textFields = document.querySelectorAll('input[type=text]')
+        // loop through all inputs to reset them to an empty string
+        for (let i = 0; i < textFields.length; i++) {
+            textFields[i].value = '';
+        }
+
+        const selectList = document.querySelector('#color');
+        selectList.value = '---';
+
+        const radioBtns = document.querySelectorAll('input[type=radio]')
+        for (let i = 0; i < radioBtns.length; i++) {
+            radioBtns[i].checked = 'false';
+        }
+
         closed.className = 'hidden';
         evidence.removeAttribute('class');
     });
