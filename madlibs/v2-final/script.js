@@ -101,7 +101,7 @@
 
         const radioBtns = document.querySelectorAll('input[type=radio]')
         for (let i = 0; i < radioBtns.length; i++) {
-            radioBtns[i].checked = 'false';
+            radioBtns[i].checked = false;
         }
 
         closed.className = 'hidden';
