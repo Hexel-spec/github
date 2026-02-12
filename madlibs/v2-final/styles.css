@@ -5,12 +5,15 @@ body {
     font-size: 1.25em;
 }
 
-h1, h2 {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+h1 {
+    font-family: "Freckle Face", Arial;
     font-weight: 400;
+    color: rgb(86, 23, 23);
 }
 
 h2 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 400;
     color: rgb(225, 55, 55);
     font-size: 4em;
     margin-bottom: 0;
@@ -103,6 +106,7 @@ form input[type=submit]:hover {
 
 #case-summary {
     display: flex;
+    min-height: 645.5px;
     /* To turn on/off */
     /* display: none; */
 }
@@ -120,6 +124,7 @@ form input[type=submit]:hover {
 #case-summary section {
     flex: 1;
     padding: 2em 2em 0 2em;
+    
 }
 
 #narration {
