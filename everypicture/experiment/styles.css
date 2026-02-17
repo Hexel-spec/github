@@ -1,0 +1,122 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    color: black;
+    background-color: rgb(63, 123, 100);
+}
+
+h1 {
+    font-weight: 900;
+    text-align: center;
+    color: aliceblue;
+}
+
+h2 {
+    text-align: center;
+    font-weight: 700;
+    color: aliceblue;
+}
+
+h3 {
+    font-weight: 600;
+    color: black;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    background-color: aliceblue;
+    min-width: 800px;
+    max-width: 900px;
+    border-radius: 10px;
+}
+
+.overlay h3 {
+    font-weight: 600;
+    padding: 2em 1em 1em 1em;
+}
+
+.overlay div {
+    display: flex;
+}
+
+.overlay img {
+    flex: 1;
+}
+
+.overlay p {
+    flex: 1;
+    padding-left: 2em;
+}
+
+.close {
+    position: absolute;
+    border-radius: 50px;
+    background-color: lightgray;
+    cursor: pointer;
+    top: 5%;
+    left: 95%
+}
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.showing {
+    visibility: visible;
+    opacity: 1;
+}
+
+#map-overlay {
+    margin: auto;
+    width: 1200px;
+    position: relative;
+}
+
+#map {
+    display: block;
+    filter: grayscale(80%);
+    margin: auto;
+}
+
+.thumbnail {
+    position: absolute;
+    border-radius: 10px;
+    filter: contrast(150%);
+    /* filter: drop-shadow(10px 10px 20px gray); */
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.thumbnail:hover {
+    transform: scale(2);
+}
+
+#hotspring {
+    top: 40%;
+    left: 65%;
+}
+
+#forest {
+    top: 53%;
+    left: 65%;
+}
+
+#lake {
+    top: 32%;
+    left: 40%;
+}
+
+#waterfall {
+    top: 55%;
+    left: 55%
+}
+
+#spring {
+    top: 35%;
+    left: 53%
+}
+
