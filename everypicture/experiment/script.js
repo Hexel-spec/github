@@ -2,6 +2,8 @@
     'use strict';
     console.log('reading js');
 
+    // ------------------ Open/Close Overlays ---------------------------
+
     // Thumbnails
     const hotSpringBtn = document.querySelector('#hotspring');
     const lakeBtn = document.querySelector('#lake');
@@ -18,6 +20,7 @@
 
     // Close button
     const closeBtns = document.querySelectorAll('.close');
+
 
 
 
@@ -61,5 +64,29 @@
             document.querySelector('.showing').className = 'overlay hidden'
         }
     });
+
+
+    
+
+    // ------------------------ Zoom Function ----------------------
+
+    // function reportPos(event) {
+    //     const mousePosX = Math.ceil((event.clientX - (container.getBoundingClientRect().left)) / percent);
+
+    //     if (prevLoc !== mousePosX) {
+    //         let addedPx = mousePosX * 30;
+    //         hotImg.style.width = (800 + addedPx) + 'px';
+    //         prevLoc = mousePosX;
+    //     }
+    // }
+
+    // const hotContainer = document.querySelector('#hotZoom');
+    // const hotImg = document.querySelector('hotZoom img');
+    // const percent = hotContainer.offsetWidth / 100;
+    // let prevLoc = 0;
+
+    // hotContainer.addEventListener('mousemove', reportPos);
+
+
 
 }());

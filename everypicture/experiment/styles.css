@@ -23,15 +23,24 @@ h3 {
 
 .overlay {
     position: absolute;
+    background-color: rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.overlay article {
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     margin: auto;
     background-color: aliceblue;
-    min-width: 800px;
-    max-width: 900px;
+    overflow: hidden;
     border-radius: 10px;
 }
+
 
 .overlay h3 {
     font-weight: 600;
@@ -39,11 +48,19 @@ h3 {
 }
 
 .overlay div {
-    display: flex;
+    width: 700px;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    margin: auto;
 }
 
 .overlay img {
-    flex: 1;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .overlay p {
@@ -52,12 +69,18 @@ h3 {
 }
 
 .close {
+    font-size: 36px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    color: tomato;
     position: absolute;
-    border-radius: 50px;
-    background-color: lightgray;
+    outline: none;
+    
     cursor: pointer;
-    top: 5%;
-    left: 95%
+    top: 10px;
+    right: 10px;
 }
 
 .hidden {
