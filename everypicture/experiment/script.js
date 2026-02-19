@@ -70,22 +70,26 @@
 
     // ------------------------ Zoom Function ----------------------
 
-    // function reportPos(event) {
-    //     const mousePosX = Math.ceil((event.clientX - (container.getBoundingClientRect().left)) / percent);
+    // const container = document.querySelector('#secretContainer');
+    // const hotSpots = document.querySelectorAll('#secretContainer div');
+    // const springImg = document.querySelector('#secretContainer img');
 
-    //     if (prevLoc !== mousePosX) {
-    //         let addedPx = mousePosX * 30;
-    //         hotImg.style.width = (800 + addedPx) + 'px';
-    //         prevLoc = mousePosX;
+    // hotSpots.forEach(function (eachSpot) {
+    //     eachSpot.addEventListener('mouseover', zoomPhoto)
+    //     eachSpot.addEventListener('mouseout', function(){
+    //         springImg.className = 'start';
+    //     })
+    // });
+
+    // function zoomPhoto(event) {
+    //     const thisCorner = event.target.id;
+    //     console.log(thisCorner);
+    //     switch (thisCorner) {
+    //         case 'top': springImg.className = 'top'; break;
+    //         case 'bottom': springImg.className = 'bottom'; break;
+            
     //     }
     // }
-
-    // const hotContainer = document.querySelector('#hotZoom');
-    // const hotImg = document.querySelector('hotZoom img');
-    // const percent = hotContainer.offsetWidth / 100;
-    // let prevLoc = 0;
-
-    // hotContainer.addEventListener('mousemove', reportPos);
 
 
 
