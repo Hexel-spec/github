@@ -1,0 +1,113 @@
+body {
+    background-color: rgb(81, 107, 98);
+    font-family: Helvetica, Arial, sans-serif;
+    color: rgb(178, 246, 223);
+    text-align: center;
+}
+
+h1 {
+    font-weight: 900;
+    font-style: italic;
+}
+
+p {
+    font-family: 'Coming Soon', Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin-top: 2em;
+}
+
+.container {
+    max-width: 850px;
+    aspect-ratio: 1000 / 787;
+    position: relative;
+    margin: auto;
+}
+
+#map, #hot, #lake, #waterfall, #spring, #forest {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+svg {
+    opacity: 0;
+}
+
+article {
+    position: absolute;
+    background-color: rgba(81, 107, 98, 0.8);
+    border-radius: 30px;
+    filter: drop-shadow(0px 5px 5px rgba(54, 63, 60, 0.5));
+    width: 800px;
+    height: 200px;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -10%);
+}
+
+#close {
+    font-size: 20px;
+    font-family: 'Coming Soon', Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0 10px 0 10px;
+    border: none;
+    background-color: rgba(81, 107, 98, 0.8);
+    border-radius: 100px;
+    color: tomato;
+    position: absolute;
+    outline: none;
+    transition: all 0.5s;
+    cursor: pointer;
+    top: 10px;
+    right: 10px;
+}
+
+#close:hover {
+    background-color: rgba(54, 63, 60, 0.9);
+}
+
+.thumbnail {
+    position: absolute;
+    border-radius: 10px;
+    filter: contrast(150%) drop-shadow(0px 5px 5px rgba(54, 63, 60, 0.5));
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.thumbnail:hover {
+    transform: scale(1.5);
+}
+
+#hotspring_thumb {
+    top: 37%;
+    left: 70%;
+}
+
+#forest_thumb {
+    top: 20%;
+    left: 65%;
+}
+
+#lake_thumb {
+    top: 2%;
+    left: 10%;
+}
+
+#waterfall_thumb {
+    top: 42%;
+    left: 48%
+}
+
+#spring_thumb {
+    top: 20%;
+    left: 45%
+}
+
+.showing {
+    visibility: visible;
+}
+
+.hidden {
+    visibility: hidden;
+}
