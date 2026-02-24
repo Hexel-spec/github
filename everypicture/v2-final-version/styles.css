@@ -13,7 +13,8 @@ h1 {
 p {
     font-family: 'Coming Soon', Arial, Helvetica, sans-serif;
     font-size: 20px;
-    margin-top: 2em;
+    margin-top: 1.5em;
+    line-height: 1.4em;
 }
 
 .container {
@@ -21,6 +22,7 @@ p {
     aspect-ratio: 1000 / 787;
     position: relative;
     margin: auto;
+    overflow: hidden;
 }
 
 #map, #hot, #lake, #waterfall, #spring, #forest {
@@ -110,4 +112,31 @@ article {
 
 .hidden {
     visibility: hidden;
+}
+
+@keyframes hotAnimation {
+    0% {filter: none;}
+    60% {filter: blur(5px);}
+    100% {filter: none;}
+}
+
+@keyframes lakeAnimation {
+    0% {filter: brightness(0.4); width: 900px;}
+    70% {filter: brightness(0.8); width: 900px;}
+    100% {filter: none; width: 850px;}
+}
+
+@keyframes waterfallAnimation {
+    from {filter: blur(5px);}
+    to {filter: none;}
+}
+
+@keyframes forestAnimation {
+    from {filter: grayscale(100%);}
+    to {filter: none;}
+}
+
+@keyframes springAnimation {
+    from {width: 1200px;}
+    to {width: 850px;}
 }

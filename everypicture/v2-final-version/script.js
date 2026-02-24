@@ -33,10 +33,8 @@
         heading.innerHTML = 'Hot Spring Pool';
         haiku.innerHTML = "The heated water<br>Envelops body and mind<br>A comforting fog"
         hotSpring.className = 'showing'
+        hotSpring.style.animation = 'hotAnimation 3s'
         closeBtn.removeAttribute('class');
-        // setTimeout( function(){
-        //     hotSpring.style.filter = 'blur(5px)'
-        // }, 5000);
     });
 
     lakeBtn.addEventListener('click', function(event){
@@ -45,6 +43,7 @@
         heading.innerHTML = 'Burnside Lake';
         haiku.innerHTML = "A strenous hike<br>Staggered upward for ages<br>And there are cars here"
         lake.className = 'showing'
+        lake.style.animation = 'lakeAnimation 3s'
         closeBtn.removeAttribute('class');
     });
 
@@ -54,6 +53,7 @@
         heading.innerHTML = 'Waterfall';
         haiku.innerHTML = "The crashing cascade<br>Heard across the silent wood<br>Gives life to the earth"
         waterfall.className = 'showing'
+        waterfall.style.animation = 'waterfallAnimation 2s'
         closeBtn.removeAttribute('class');
     });
     
@@ -63,6 +63,7 @@
         heading.innerHTML = 'Burnt Forest';
         haiku.innerHTML = "Tree trunks scorched pitch black<br>I put forth my hand to touch<br>Became smudged with soot"
         forest.className = 'showing'
+        forest.style.animation = 'forestAnimation 2s'
         closeBtn.removeAttribute('class');
     });
 
@@ -72,6 +73,7 @@
         heading.innerHTML = 'Secret Spring';
         haiku.innerHTML = "A hidden treasure<br>Swim up to the waterfall<br>For frigid showers"
         spring.className = 'showing'
+        spring.style.animation = 'springAnimation 3s ease'
         closeBtn.removeAttribute('class');
     });
 
@@ -82,12 +84,20 @@
         closeBtn.className = 'hidden';
         document.querySelector('.showing').className = 'hidden'
         heading.innerHTML = 'Grover Hot Springs State Park';
-        haiku.innerHTML = "Click on a location to experience it through haiku"
+        haiku.innerHTML = "Click on a location to feel my experience."
         map.className = 'showing';
     })
 
-    // Note to self: if time, work on function to close textbox when holding Tab
-    
+    document.addEventListener('keydown', function(event){
+        if (event.key === 'Escape') {
+            event.preventDefault();
+            closeBtn.className = 'hidden';
+            document.querySelector('.showing').className = 'hidden'
+            heading.innerHTML = 'Grover Hot Springs State Park';
+            haiku.innerHTML = "Click on a location to feel my experience."
+            map.className = 'showing';
+        }
+    })
 
     
 }());
