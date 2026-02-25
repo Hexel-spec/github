@@ -17,6 +17,10 @@ p {
     line-height: 1.4em;
 }
 
+main {
+    margin: 50px;
+}
+
 .container {
     max-width: 850px;
     aspect-ratio: 1000 / 787;
@@ -30,10 +34,6 @@ p {
     top: 0;
     left: 0;
     width: 100%;
-}
-
-svg {
-    opacity: 0;
 }
 
 article {
