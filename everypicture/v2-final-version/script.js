@@ -32,8 +32,8 @@
         map.className = 'hidden';
         heading.innerHTML = 'Hot Spring Pool';
         haiku.innerHTML = "The heated water<br>Envelops body and mind<br>A comforting fog"
-        hotSpring.className = 'showing'
-        hotSpring.style.animation = 'hotAnimation 3s'
+        hotSpring.className = 'showing hotAnimate'
+        // hotSpring.style.animation = 'hotAnimation 3s'
         closeBtn.removeAttribute('class');
     });
 
@@ -42,8 +42,8 @@
         map.className = 'hidden';
         heading.innerHTML = 'Burnside Lake';
         haiku.innerHTML = "A strenous hike<br>Staggered upward for ages<br>And there are cars here"
-        lake.className = 'showing'
-        lake.style.animation = 'lakeAnimation 3s'
+        lake.className = 'showing lakeAnimate'
+        // lake.style.animation = 'lakeAnimation 3s'
         closeBtn.removeAttribute('class');
     });
 
@@ -52,8 +52,8 @@
         map.className = 'hidden';
         heading.innerHTML = 'Waterfall';
         haiku.innerHTML = "The crashing cascade<br>Heard across the silent wood<br>Gives life to the earth"
-        waterfall.className = 'showing'
-        waterfall.style.animation = 'waterfallAnimation 2s'
+        waterfall.className = 'showing waterfallAnimate'
+        // waterfall.style.animation = 'waterfallAnimation 2s'
         closeBtn.removeAttribute('class');
     });
     
@@ -62,8 +62,8 @@
         map.className = 'hidden';
         heading.innerHTML = 'Burnt Forest';
         haiku.innerHTML = "Tree trunks scorched pitch black<br>I put forth my hand to touch<br>Became smudged with soot"
-        forest.className = 'showing'
-        forest.style.animation = 'forestAnimation 2s'
+        forest.className = 'showing forestAnimate'
+        // forest.style.animation = 'forestAnimation 2s'
         closeBtn.removeAttribute('class');
     });
 
@@ -72,8 +72,8 @@
         map.className = 'hidden';
         heading.innerHTML = 'Secret Spring';
         haiku.innerHTML = "A hidden treasure<br>Swim up to the waterfall<br>For frigid showers"
-        spring.className = 'showing'
-        spring.style.animation = 'springAnimation 3s ease'
+        spring.className = 'showing springAnimate'
+        // spring.style.animation = 'springAnimation 3s ease'
         closeBtn.removeAttribute('class');
     });
 
