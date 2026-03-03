@@ -1,0 +1,26 @@
+
+body {
+    font-family: Quicksand, Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: #389F83;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    max-width: 800px;
+    margin: auto;
+}
+
+section {
+    margin-top: 2em;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+img {
+    flex: 1;
+    margin: auto;
+}
+
