@@ -8,16 +8,125 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
 
     <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chilanka&display=swap" rel="stylesheet">
 
     <link href="styles.css" rel="stylesheet">
     <script src="script.js" defer></script>
 </head>
 <body>
     
-    <p>Player 1, choose Rock, Paper, or Scissors</p>
-    <button id="rock">Rock</button>
-    <button id="paper">Paper</button>
-    <button id="scissors">Scissors</button>
+    <main>   
+        <header>
+            <h1>RO SHAM BO!</h1>
+        </header>
 
+        <div id="container">
+            <section id="side1">
+                <div class="health">
+                    <h2>Player 1</h2>
+                    <div id="healthbar1"><div></div></div>
+                    <p id="playerhealth1">100%</p>
+                </div>
+                <form id="player1form">
+                    <fieldset>
+                        <input type="radio" id="rock1-1" name="select1-1" value="rock">
+                        <label for="rock1-1">Rock</label>
+
+                        <input type="radio" id="paper1-1" name="select1-1" value="paper">
+                        <label for="paper1-1">Paper</label>
+                        
+                        <input type="radio" id="scissors1-1" name="select1-1" value="scissors">
+                        <label for="scissors1-1">Scissors</label>
+                    </fieldset>
+
+                    <fieldset>
+                        <input type="radio" id="rock1-2" name="select1-2" value="rock">
+                        <label for="rock1-2">Rock</label>
+
+                        <input type="radio" id="paper1-2" name="select1-2" value="paper">
+                        <label for="paper1-2">Paper</label>
+                        
+                        <input type="radio" id="scissors1-2" name="select1-2" value="scissors">
+                        <label for="scissors1-2">Scissors</label>
+                    </fieldset>
+                    
+                    <fieldset>
+                        <input type="radio" id="rock1-3" name="select1-3" value="rock">
+                        <label for="rock1-3">Rock</label>
+
+                        <input type="radio" id="paper1-3" name="select1-3" value="paper">
+                        <label for="paper1-3">Paper</label>
+                        
+                        <input type="radio" id="scissors1-3" name="select1-3" value="scissors">
+                        <label for="scissors1-3">Scissors</label>
+                    </fieldset>
+
+                    <input type="submit" name="finishsetup" value="Finish Setup!">
+                </form>
+
+                <section class="cardselections">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </section>
+                
+            </section>
+
+            <section id="side2">
+                <section class="cardselections">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </section>
+
+                <form id="player2form" class="hidden">
+                    <fieldset>
+                        <input type="radio" id="rock2-1" name="select2-1" value="rock">
+                        <label for="rock2-1">Rock</label>
+
+                        <input type="radio" id="paper2-1" name="select2-1" value="paper">
+                        <label for="paper2-1">Paper</label>
+                        
+                        <input type="radio" id="scissors2-1" name="select2-1" value="scissors">
+                        <label for="scissors2-1">Scissors</label>
+                    </fieldset>
+
+                    <fieldset>
+                        <input type="radio" id="rock2-2" name="select2-2" value="rock">
+                        <label for="rock2-2">Rock</label>
+
+                        <input type="radio" id="paper2-2" name="select2-2" value="paper">
+                        <label for="paper2-2">Paper</label>
+                        
+                        <input type="radio" id="scissors2-2" name="select2-2" value="scissors">
+                        <label for="scissors2-2">Scissors</label>
+                    </fieldset>
+                    
+                    <fieldset>
+                        <input type="radio" id="rock2-3" name="select2-3" value="rock">
+                        <label for="rock2-3">Rock</label>
+
+                        <input type="radio" id="paper2-3" name="select2-3" value="paper">
+                        <label for="paper2-3">Paper</label>
+                        
+                        <input type="radio" id="scissors2-3" name="select2-3" value="scissors">
+                        <label for="scissors2-3">Scissors</label>
+                    </fieldset>
+
+                    <input type="submit" name="finishsetup" value="Finish Setup!">
+                </form>
+
+                <div class="health">
+                    <h2>Player 2</h2>
+                    <div id="healthbar2"><div></div></div><p id="playerhealth2">100%</p>
+                </div>
+
+            </section>
+        </div>
+    </main>
+    
 </body>
 </html>

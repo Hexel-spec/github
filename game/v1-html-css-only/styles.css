@@ -1,0 +1,92 @@
+body {
+    font-family: "Chilanka", Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    max-width: 1200px;
+    aspect-ratio: 1200 / 750;
+    margin: auto;
+    background-image: url(images/tabletop_photo.jpeg);
+}
+
+header {
+    background-color: #6F6684;
+    padding: 3px 0 3px 0;
+}
+
+h1 {
+    font-family: "Chewy", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+#container {
+    box-sizing: border-box;
+    padding: 2em;
+    display: flex;
+}
+
+#container section {
+    flex: 1;
+    display: flex;
+}
+
+.health {
+    text-align: center;
+}
+
+#healthbar1, #healthbar2 {
+    height: 500px;
+    width: 30px;
+    border: 2px solid #333;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+#healthbar1 div, #healthbar2 div{
+    height: 100%;
+    width: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(0deg, rgba(1,148,57,1) 0%, rgba(68,203,120,1) 50%, rgba(1,148,57,1) 100%);
+}
+
+
+fieldset {
+    border: none;
+    margin: 6em 0 6em 0;
+}
+
+form input[type=submit] {
+    margin: auto;
+}
+
+.cardselections {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cardselections div {
+    height: 145px;
+    width: 205px;
+    border-width: 1px;
+    border-color: black;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
