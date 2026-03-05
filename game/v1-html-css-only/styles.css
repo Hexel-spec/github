@@ -2,6 +2,7 @@ body {
     font-family: "Chilanka", Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
+    background-image: url(images/roshambo_pattern.png);
 }
 
 main {
@@ -46,6 +47,7 @@ h2 {
     height: 500px;
     width: 30px;
     border: 2px solid #333;
+    background-color: darkred;
     margin: auto;
     position: relative;
     overflow: hidden;
@@ -58,23 +60,42 @@ h2 {
     position: absolute;
     top: 0;
     left: 0;
-    background: linear-gradient(0deg, rgba(1,148,57,1) 0%, rgba(68,203,120,1) 50%, rgba(1,148,57,1) 100%);
+    background-color: #6CD18E;
 }
 
 
 fieldset {
     border: none;
-    margin: 6em 0 6em 0;
+    margin: 120px 0 120px 0;
+}
+
+form {
+    position: relative;
 }
 
 form input[type=submit] {
-    margin: auto;
+    background-color: #6F6684;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 5px 5px 5px;
+    position: absolute;
+}
+
+#finish1 {
+    bottom: 60px;
+    left: 275px;
+}
+
+#finish2 {
+    bottom: 60px;
+    right: 325px;
 }
 
 .cardselections {
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
 }
 
 .cardselections div {
@@ -83,10 +104,11 @@ form input[type=submit] {
     border-width: 1px;
     border-color: black;
     border-radius: 5px;
-    background-color: white;
+    background-color: #6F6684;
+    filter: drop-shadow(5px);
 }
 
-.hidden {
+/* .hidden {
     visibility: hidden;
     opacity: 0;
-}
+} */
