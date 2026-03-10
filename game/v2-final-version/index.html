@@ -23,6 +23,12 @@
             <h1>RO SHAM BO!</h1>
         </header>
 
+        <div id="overlay" class="hidden">
+            <h1>Round 1</h1>
+        </div>
+
+        <!-- <img src="images/rock.PNG" alt="rock" height="120"> -->
+
         <div id="container">
             <section id="side1">
                 <div class="health">
@@ -32,7 +38,7 @@
                 </div>
                 <form id="player1form">
                     <fieldset>
-                        <input type="radio" id="rock1-1" name="select1-1" value="rock">
+                        <input type="radio" id="rock1-1" name="select1-1" value="rock" required>
                         <label for="rock1-1"><img src="images/rock.PNG" alt="rock" width="40"></label>
 
                         <input type="radio" id="paper1-1" name="select1-1" value="paper">
@@ -43,7 +49,7 @@
                     </fieldset>
 
                     <fieldset>
-                        <input type="radio" id="rock1-2" name="select1-2" value="rock">
+                        <input type="radio" id="rock1-2" name="select1-2" value="rock" required>
                         <label for="rock1-2"><img src="images/rock.PNG" alt="rock" width="40"></label>
 
                         <input type="radio" id="paper1-2" name="select1-2" value="paper">
@@ -54,7 +60,7 @@
                     </fieldset>
                     
                     <fieldset>
-                        <input type="radio" class="rock" id="rock1-3" name="select1-3" value="rock">
+                        <input type="radio" class="rock" id="rock1-3" name="select1-3" value="rock" required>
                         <label for="rock1-3"><img src="images/rock.PNG" alt="rock" width="40"></label>
 
                         <input type="radio" id="paper1-3" name="select1-3" value="paper">
@@ -68,23 +74,23 @@
                 </form>
 
                 <section class="cardselections">
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                    <div><img src="images/roshambo_pattern.png" alt="cardback" width="480"></div>
+                    <div><img src="images/roshambo_pattern.png" alt="cardback" width="480"></div>
+                    <div><img src="images/roshambo_pattern.png" alt="cardback" width="480"></div>
                 </section>
                 
             </section>
 
             <section id="side2">
                 <section class="cardselections">
-                    <div id="2-1"></div>
-                    <div id="2-2"></div>
-                    <div id="2-3"></div>
+                    <div id="2-1"><img src="images/roshambo_pattern.png" alt="cardback" width="480"></div>
+                    <div id="2-2"><img src="images/roshambo_pattern.png" alt="cardback" width="480"></div>
+                    <div id="2-3"><img src="images/roshambo_pattern.png" alt="cardback" width="480"></div>
                 </section>
 
                 <form id="player2form" class="hidden">
                     <fieldset>
-                        <input type="radio" id="rock2-1" name="select2-1" value="rock">
+                        <input type="radio" id="rock2-1" name="select2-1" value="rock" required>
                         <label for="rock2-1"><img src="images/rock.PNG" alt="rock" width="40"></label>
 
                         <input type="radio" id="paper2-1" name="select2-1" value="paper">
@@ -95,7 +101,7 @@
                     </fieldset>
 
                     <fieldset>
-                        <input type="radio" id="rock2-2" name="select2-2" value="rock">
+                        <input type="radio" id="rock2-2" name="select2-2" value="rock" required>
                         <label for="rock2-2"><img src="images/rock.PNG" alt="rock" width="40"></label>
 
                         <input type="radio" id="paper2-2" name="select2-2" value="paper">
@@ -106,7 +112,7 @@
                     </fieldset>
                     
                     <fieldset>
-                        <input type="radio" id="rock2-3" name="select2-3" value="rock">
+                        <input type="radio" id="rock2-3" name="select2-3" value="rock" required>
                         <label for="rock2-3"><img src="images/rock.PNG" alt="rock" width="40"></label>
 
                         <input type="radio" id="paper2-3" name="select2-3" value="paper">
@@ -125,6 +131,15 @@
                 </div>
 
             </section>
+            <div id="textbox" class="hidden">
+                <p>Game Start!</p>
+            </div>
+
+            <div id="gamebtns">
+                <button type="button" id="nextround" class="hidden">Next Round</button>
+                <button type="button" id="quitgame" class="hidden">Quit Game</button>
+            </div>
+
         </div>
     </main>
     

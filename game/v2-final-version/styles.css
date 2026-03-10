@@ -38,6 +38,7 @@ h2 {
     box-sizing: border-box;
     padding: 2em;
     display: flex;
+    position: relative;
 }
 
 #container section {
@@ -64,6 +65,7 @@ h2 {
 #healthbar1 div, #healthbar2 div{
     height: 100%;
     width: 30px;
+    transform: rotate(180deg);
     position: absolute;
     top: 0;
     left: 0;
@@ -78,6 +80,10 @@ fieldset {
 
 form {
     position: relative;
+}
+
+form input[type=radio] {
+    /* appearance: none; */
 }
 
 form input[type=submit] {
@@ -120,9 +126,63 @@ form label {
     border-radius: 5px;
     background-color: #9b94ad;
     filter: drop-shadow(0px 5px 1px #3e3b46);
+    transition: all 0.75s ease;
+    overflow: hidden;
+}
+
+.cardselections div img {
+    display: block;
+    margin: auto;
+}
+
+#overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.448);
+    transition: all 1s ease-in-out;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+}
+
+#overlay h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: whitesmoke;
+}
+
+#textbox {
+    position: absolute;
+    background-color: whitesmoke;
+    border: 2px solid #333;
+    border-radius: 3px;
+    height: 40px;
+    width: 700px;
+    text-align: center;
+    bottom: 60px;
+    left: 50%;
+    transform: translate(-50%, -0%);
 }
 
 .hidden {
     visibility: hidden;
     opacity: 0;
+}
+
+#gamebtns button {
+    position: absolute;
+}
+
+#nextround {
+    bottom: 30px;
+    left: 425px
+}
+
+#quitgame {
+    bottom: 30px;
+    right: 475px;
 }
