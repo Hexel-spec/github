@@ -84,11 +84,116 @@ form {
 
 form input[type=radio] {
     appearance: none;
+    margin: 0;
+    padding: 0;
 }
 
 form input[type=radio]:checked {
+    position: absolute;
     outline: 1px solid #333;
-    padding: 3px;
+    border-radius: 50px;
+    padding: 25px;
+    top: 50px;
+    left: 50px;
+}
+
+/* Vertical Gap: 162px. Horizontal gap: 57px */
+#rock1-1:checked {
+    top: 103px;
+    left: 8px;
+}
+
+#rock1-2:checked {
+    top: 265px;
+    left: 8px;
+}
+
+#rock1-3:checked {
+    top: 428px;
+    left: 8px;
+}
+
+#paper1-1:checked {
+    top: 103px;
+    left: 65px;
+}
+
+#paper1-2:checked {
+    top: 265px;
+    left: 65px;
+}
+
+#paper1-3:checked {
+    top: 428px;
+    left: 65px;
+}
+
+#scissors1-1:checked {
+    top: 103px;
+    left: 120px;
+}
+
+#scissors1-2:checked {
+    top: 265px;
+    left: 120px;
+}
+
+#scissors1-3:checked {
+    top: 428px;
+    left: 120px;
+}
+
+#rock2-1:checked {
+    top: 103px;
+    left: 8px;
+}
+
+#rock2-2:checked {
+    top: 265px;
+    left: 8px;
+}
+
+#rock2-3:checked {
+    top: 428px;
+    left: 8px;
+}
+
+#paper2-1:checked {
+    top: 103px;
+    left: 65px;
+}
+
+#paper2-2:checked {
+    top: 265px;
+    left: 65px;
+}
+
+#paper2-3:checked {
+    top: 428px;
+    left: 65px;
+}
+
+#scissors2-1:checked {
+    top: 103px;
+    left: 120px;
+}
+
+#scissors2-2:checked {
+    top: 265px;
+    left: 120px;
+}
+
+#scissors2-3:checked {
+    top: 428px;
+    left: 120px;
+}
+
+button {
+    background-color: #a8a8a8;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 5px 5px 5px;
+    cursor: pointer; 
 }
 
 form input[type=submit] {
@@ -108,7 +213,7 @@ form label {
 
 #finish1 {
     bottom: 50px;
-    left: 275px;
+    left: 300px;
 }
 
 #finish2 {
@@ -126,8 +231,7 @@ form label {
 .cardselections div {
     height: 145px;
     width: 205px;
-    border-width: 1px;
-    border-color: black;
+    border: 2px solid #333;
     border-radius: 5px;
     background-color: #9b94ad;
     filter: drop-shadow(0px 5px 1px #3e3b46);
@@ -138,6 +242,10 @@ form label {
 .cardselections div img {
     display: block;
     margin: auto;
+}
+
+#side1 .cardselections {
+    margin-left: 65px;
 }
 
 #overlay {
