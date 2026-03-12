@@ -254,7 +254,7 @@
             damagedPlayer.hp = 0;
             gameWin = 'true';
             textbox.innerHTML = `<p>${damagedPlayer.name} lost all HP. ${otherPlayer.name} wins the game!</p>`;
-            overlay.innerHTML = `<h1>${otherPlayer.name} is the winner!</h1> <button>Play Again?</button>`
+            overlay.innerHTML = `<h1>${otherPlayer.name} is the winner!</h1> <button id="restart">Play Again?</button>`
             overlay.removeAttribute('class')
             document.querySelector('#overlay button').addEventListener('click', function(){
                 location.reload();
