@@ -5,17 +5,22 @@
     const form1 = document.querySelector('#player1form');
     const form2 = document.querySelector('#player2form');
 
-    const radiobtns = document.querySelectorAll('input[type=radio]')
     const icons = document.querySelectorAll('label img');
 
     const textbox = document.querySelector('#textbox')
     const overlay = document.querySelector('#overlay');
-;
+
     const player1Divs = document.querySelectorAll('#side1 .cardselections div');
     const player2Divs = document.querySelectorAll('#side2 .cardselections div');
 
     const nextRound = document.querySelector('#nextround');
     const quitGame = document.querySelector('#quitgame');
+
+    const popSound = new Audio('audio/pop_sound.mp3')
+    const rockSound = new Audio('audio/rock_speak.mp3');
+    const paperSound = new Audio('audio/paper_speak.mp3');
+    const scissorsSound = new Audio('audio/scissors_speak.mp3');
+    const wooshSound = new Audio('audio/woosh.mp3')
 
     let roundCounter = 1;
     let gameWin = 'false';
@@ -36,14 +41,20 @@
         hp: 100
     }
 
+    
     overlay.removeAttribute('class');
-    setTimeout(function(){overlay.className = 'hidden';}, 2000)
+    document.querySelector('#overlay button').addEventListener('click', function(){
+        popSound.play();
+        overlay.className = 'hidden'
+    })
 
-    // for (let i in icons) {
-    //     icons[i].addEventListener('click', function(){
-    //         icons[i].style.border = '2px solid #333';
-    //     })
-    // }
+    // setTimeout(function(){overlay.className = 'hidden';}, 2000)
+
+    icons.forEach(function(icon){
+        icon.addEventListener('click', function(){
+            popSound.play();
+        })
+    })
 
     form1.addEventListener('submit', function(event){
         event.preventDefault();
@@ -67,6 +78,7 @@
         console.log(player1.second);
         console.log(player1.third);
 
+        popSound.play();
         form2.removeAttribute('class');
         form1.className = 'hidden';
     });
@@ -95,10 +107,12 @@
 
         form2.className = 'hidden';
 
+        wooshSound.play();
         playGame()
     });
 
     function playGame() {
+        textbox.innerHTML = `<p>Round ${roundCounter} start!</p>`
         textbox.removeAttribute('class');
         overlay.innerHTML = '<h1>Game Start!</h1>'
         overlay.removeAttribute('class');
@@ -147,14 +161,17 @@
 
         setTimeout(function(){
             if (player1Choice === 'rock') {
+                rockSound.play();
                 player1Div.style.backgroundColor = 'whitesmoke';
                 player1Div.innerHTML = '<img src="images/rock.PNG" alt="rock" height="120">'
             
             } else if (player1Choice === 'paper') {
+                paperSound.play();
                 player1Div.style.backgroundColor = 'whitesmoke';
                 player1Div.innerHTML = '<img src="images/paper.PNG" alt="paper" height="120">'
                 
             } else if (player1Choice === 'scissors') {
+                scissorsSound.play();
                 player1Div.style.backgroundColor = 'whitesmoke';
                 player1Div.innerHTML = '<img src="images/scissors.PNG" alt="scissors" height="120">'
                 
@@ -164,14 +181,17 @@
 
             setTimeout(function(){
                 if (player2Choice === 'rock') {
+                    rockSound.play();
                     player2Div.style.backgroundColor = 'whitesmoke';
                     player2Div.innerHTML = '<img src="images/rock.PNG" alt="rock" height="120">'
                 
                 } else if (player2Choice === 'paper') {
+                    paperSound.play();
                     player2Div.style.backgroundColor = 'whitesmoke';
                     player2Div.innerHTML = '<img src="images/paper.PNG" alt="paper" height="120">'
                     
                 } else if (player2Choice === 'scissors') {
+                    scissorsSound.play();
                     player2Div.style.backgroundColor = 'whitesmoke';
                     player2Div.innerHTML = '<img src="images/scissors.PNG" alt="scissors" height="120">'
                     
@@ -211,12 +231,14 @@
     
     function manageHP(damagedPlayer, otherPlayer){
         if (damagedPlayer.name === 'Player 1') {
-                player1.hp = player1.hp - 10;
+                player1.hp = player1.hp - 100;
                 document.querySelector('#healthbar1 div').style.height = `${player1.hp}%`;
+                document.querySelector('#healthbar1 div').style.top = `${100 - player1.hp}%`;
                 document.querySelector('#playerhealth1').innerHTML = `${player1.hp}%`;
             } else if (damagedPlayer.name === 'Player 2') {
                 player2.hp = player2.hp - 10;
                 document.querySelector('#healthbar2 div').style.height = `${player2.hp}%`;
+                document.querySelector('#healthbar2 div').style.top = `${100 - player2.hp}%`;
                 document.querySelector('#playerhealth2').innerHTML = `${player2.hp}%`;
             } else {
                 console.log('something went wrong');
@@ -232,15 +254,21 @@
             damagedPlayer.hp = 0;
             gameWin = 'true';
             textbox.innerHTML = `<p>${damagedPlayer.name} lost all HP. ${otherPlayer.name} wins the game!</p>`;
-            overlay.innerHTML = `<h1>${otherPlayer.name} is the winner!</h1>`
+            overlay.innerHTML = `<h1>${otherPlayer.name} is the winner!</h1> <button>Play Again?</button>`
             overlay.removeAttribute('class')
         }
+
+        document.querySelector('#overlay button').addEventListener('click', function(){
+            location.reload();
+        })
         
     }
 
     nextRound.addEventListener('click', function(){
         //reset board
         roundCounter += 1;
+
+        popSound.play();
 
         const radios = document.querySelectorAll('input[type=radio]');
         for (let i = 0; i < radios.length; i++) {
@@ -271,6 +299,7 @@
     })
 
     quitGame.addEventListener('click', function(){
+        popSound.play();
         location.reload();
     })
 

@@ -16,7 +16,7 @@ main {
 
 header {
     /* background-color: #6F6684; */
-    margin-top: 10px;
+    margin-top: 5px;
     padding-top: 15px;
 }
 
@@ -24,7 +24,7 @@ h1 {
     font-family: "Chewy", Arial, Helvetica, sans-serif;
     font-weight: 400;
     font-size: 60px;
-    color: black;
+    color: #444;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -90,7 +90,7 @@ form input[type=radio] {
 
 form input[type=radio]:checked {
     position: absolute;
-    outline: 1px solid #333;
+    outline: 2px solid #6CD18E;
     border-radius: 50px;
     padding: 25px;
     top: 50px;
@@ -100,92 +100,92 @@ form input[type=radio]:checked {
 /* Vertical Gap: 162px. Horizontal gap: 57px */
 #rock1-1:checked {
     top: 103px;
-    left: 8px;
+    left: 22px;
 }
 
 #rock1-2:checked {
     top: 265px;
-    left: 8px;
+    left: 22px;
 }
 
 #rock1-3:checked {
     top: 428px;
-    left: 8px;
+    left: 22px;
 }
 
 #paper1-1:checked {
     top: 103px;
-    left: 65px;
+    left: 86px;
 }
 
 #paper1-2:checked {
     top: 265px;
-    left: 65px;
+    left: 86px;
 }
 
 #paper1-3:checked {
     top: 428px;
-    left: 65px;
+    left: 86px;
 }
 
 #scissors1-1:checked {
     top: 103px;
-    left: 120px;
+    left: 147px;
 }
 
 #scissors1-2:checked {
     top: 265px;
-    left: 120px;
+    left: 147px;
 }
 
 #scissors1-3:checked {
     top: 428px;
-    left: 120px;
+    left: 147px;
 }
 
 #rock2-1:checked {
     top: 103px;
-    left: 8px;
+    left: 22px;
 }
 
 #rock2-2:checked {
     top: 265px;
-    left: 8px;
+    left: 22px;
 }
 
 #rock2-3:checked {
     top: 428px;
-    left: 8px;
+    left: 22px;
 }
 
 #paper2-1:checked {
     top: 103px;
-    left: 65px;
+    left: 86px;
 }
 
 #paper2-2:checked {
     top: 265px;
-    left: 65px;
+    left: 86px;
 }
 
 #paper2-3:checked {
     top: 428px;
-    left: 65px;
+    left: 86px;
 }
 
 #scissors2-1:checked {
     top: 103px;
-    left: 120px;
+    left: 147px;
 }
 
 #scissors2-2:checked {
     top: 265px;
-    left: 120px;
+    left: 147px;
 }
 
 #scissors2-3:checked {
     top: 428px;
-    left: 120px;
+    left: 147px;
 }
 
 button {
@@ -194,6 +194,11 @@ button {
     border-radius: 5px;
     padding: 6px 5px 5px 5px;
     cursor: pointer; 
+    transition: all 0.5s ease;
+}
+
+button:hover {
+    background-color: #6CD18E;
 }
 
 form input[type=submit] {
@@ -203,17 +208,22 @@ form input[type=submit] {
     padding: 6px 5px 5px 5px;
     cursor: pointer;
     position: absolute;
+    transition: all 0.5s ease;
+}
+
+form input[type=submit]:hover {
+    background-color: #6CD18E;
 }
 
 form label {
-    margin-right: 8px;
+    margin-left: 15px;
     cursor: pointer;
 }
 
 
 #finish1 {
     bottom: 50px;
-    left: 300px;
+    left: 325px;
 }
 
 #finish2 {
@@ -231,7 +241,7 @@ form label {
 .cardselections div {
     height: 145px;
     width: 205px;
-    border: 2px solid #333;
+    border: 2px solid #77757a;
     border-radius: 5px;
     background-color: #9b94ad;
     filter: drop-shadow(0px 5px 1px #3e3b46);
@@ -252,7 +262,7 @@ form label {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.448);
+    background-color: rgba(0, 0, 0, 0.549);
     transition: all 1s ease-in-out;
     top: 50%;
     left: 50%;
@@ -262,10 +272,17 @@ form label {
 
 #overlay h1 {
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: whitesmoke;
+}
+
+#overlay button {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 #textbox {
