@@ -231,7 +231,7 @@
     
     function manageHP(damagedPlayer, otherPlayer){
         if (damagedPlayer.name === 'Player 1') {
-                player1.hp = player1.hp - 100;
+                player1.hp = player1.hp - 10;
                 document.querySelector('#healthbar1 div').style.height = `${player1.hp}%`;
                 document.querySelector('#healthbar1 div').style.top = `${100 - player1.hp}%`;
                 document.querySelector('#playerhealth1').innerHTML = `${player1.hp}%`;
