@@ -231,13 +231,13 @@
     
     function manageHP(damagedPlayer, otherPlayer){
         if (damagedPlayer.name === 'Player 1') {
-                player1.hp = player1.hp - 20;
+                player1.hp = player1.hp - 10;
                 document.querySelector('#healthbar1 div').style.height = `${player1.hp}%`;
                 document.querySelector('#healthbar1 div').style.top = `${100 - player1.hp}%`;
                 document.querySelector('#playerhealth1').innerHTML = `${player1.hp}%`;
             } else if (damagedPlayer.name === 'Player 2') {
-                player2.hp = player2.hp - 20;
-                document.querySelector('#heagicolthbar2 div').style.height = `${player2.hp}%`;
+                player2.hp = player2.hp - 10;
+                document.querySelector('#healthbar2 div').style.height = `${player2.hp}%`;
                 document.querySelector('#healthbar2 div').style.top = `${100 - player2.hp}%`;
                 document.querySelector('#playerhealth2').innerHTML = `${player2.hp}%`;
             } else {
